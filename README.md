@@ -12,11 +12,11 @@ The script is pretty short:
 
 ```
 echo http://ark.intel.com/search?q=$(sysctl -n machdep.cpu.brand_string | awk '{print $3}')
-^    ^                               ^                                    ^
-|    |                               |                                    |= print only the model
-|    |                               |= get the branded cpu model
-|    |= the url of search on intel
-|= open in default application
+↑    ↑                               ↑                                    ↑
+|    |                               |                                    └ print only the model
+|    |                               └ get the branded cpu model
+|    └ the url of search on intel
+└ open in default application
 ```
 
 It's edited from [this](http://superuser.com/a/436989) answer on the superuser stackexchange. That answer searches on Google, my version goes to intel directly.
